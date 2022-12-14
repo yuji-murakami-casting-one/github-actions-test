@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
+      QAFIX_BASE_BRANCH: qa
     steps:
       - uses: actions/checkout@v2
       - name: edit pull-request
         run: |
-          gh pr edit ${{ github.event.pull_request.number }} --base qa
+          gh pr edit ${{ github.event.pull_request.number }} --base $HOTFIX_BASE_BRANCH

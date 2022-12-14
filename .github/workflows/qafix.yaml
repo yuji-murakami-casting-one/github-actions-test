@@ -4,10 +4,11 @@ on:
   pull_request_target:
     types:
       - opened
+    branches:
+      - qafix/**
 
 jobs:
   edit-pr:
-    if:  startsWith(github.head_ref, 'qafix/')
     steps:
       - name: edit pull-request
         run: |

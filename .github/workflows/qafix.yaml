@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: edit pull-request
         run: |
-          gh pr edit --base qa
+          gh pr edit ${{ github.event.pull_request.number }} --base qa

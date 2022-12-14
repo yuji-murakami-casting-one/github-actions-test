@@ -10,6 +10,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
+      - uses: actions/checkout@v2
       - name: edit pull-request
         run: |
-          gh pr edit --repo github.com/yuji-murakami-casting-one/github-actions-test --base qa
+          gh pr edit --base qa

@@ -7,6 +7,8 @@ jobs:
   edit-pr:
     if:  startsWith(github.head_ref, 'qafix/')
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: edit pull-request
         run: |

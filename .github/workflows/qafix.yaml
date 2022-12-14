@@ -1,0 +1,15 @@
+name: qafix
+
+on:
+  pull_request_target:
+    types:
+      - opened
+    branches:
+      - qafix/**
+
+jobs:
+  edit-pr:
+    steps:
+      - name: edit pull-request
+        run: |
+          gh pr edit --base qa

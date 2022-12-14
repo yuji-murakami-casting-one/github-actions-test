@@ -6,6 +6,7 @@ on:
 jobs:
   edit-pr:
     if:  startsWith(github.head_ref, 'qafix/')
+    runs-on: ubuntu-latest
     steps:
       - name: edit pull-request
         run: |
